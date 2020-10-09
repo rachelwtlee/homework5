@@ -1,0 +1,136 @@
+<html>
+
+    <head>
+        <title>Bun Bun Bake Shop</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+
+<!--    MAIN NAV-->
+    <header>
+      <nav>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <a href="index.html" id="bunBun">
+                    <div id="rollSvg">
+                      <img src="images/bun.svg">
+                    </div>
+                    <div id="rollSvg">
+                      <img src="images/bun.svg">
+                    </div>
+                      <h2>Bake Shop</h2>
+                  </a>
+                </li>
+<!-- DROPDOWN MENU -->
+                <li>
+                  <li class="navText">
+                      <a href="product.html">Shop <img src="images/chevron.svg" id="svgNav"></a>
+                      <ul>
+                        <li>
+                          <a href="product.html">New In</a>
+                        </li>
+                        <li>
+                          <a href="#">Best Sellers</a>
+                        </li>
+                        <li>
+                          <a href="#">Fall Favourites</a>
+                        </li>
+                        <li>
+                          <a href="#">All Products</a>
+                        </li>
+                      </ul>
+                  </li>
+                </li>
+
+                <li class="navText">
+                  <a href="about.html">About</a>
+                </li>
+
+                <li class="navText">
+                  <a href="contact.html">Contact</a>
+                </li>
+
+                <li class="navText">
+                  <a href="#">Cart<img src="images/shopping-bag.svg" id="svgNav"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+    </header>
+
+    <body>
+      <div class="grid">
+        <div id="banner">
+        <img src="images/banner.jpg">
+        <div id="bannerText"><h1>Home to the best artisan cinnamon rolls in Pittsburgh, PA.</h1></div>
+      </div>
+      <div class="clear"></div>
+
+      <h2 class="sectionHeader" id="featured">Featured Items</h2>
+      </div>
+      <div class="gridThree">
+        <div>
+          <div class="productImg">
+            <img id="best" src="images/bestSeller.png">
+            <a href="pumpkin.html"><img src="images/pumpkin.jpg"></a>
+          </div>
+          <a id="pumpkinShop" href="pumpkin.html"><h3>Pumpkin Spice Cinnamon Roll</h3></a>
+          <p>From $5</p>
+          <!-- TOGGLING DIFFERENT BUTTON STYLING ONMOUSEOVER AND ONMOUSEOUT -->
+          <a onmouseover="buttonHover();" onmouseout="buttonOut();" href="pumpkin.html">
+            <button id="pumpkin" class="button"><p>Shop Now</p></button></a>
+        </div>
+        <div>
+          <div class="productImg">
+            <img id="best" src="images/bestSeller.png">
+            <img src="images/caramel.jpg">
+          </div>
+          <h3>Caramel Pecan Cinnamon Roll</h3>
+          <p>From $5</p>
+          <a onmouseover="buttonHover2();" onmouseout="buttonOut2();"><button id="caramel"><p>Shop Now</p></button></a>
+        </div>
+        <div>
+          <div class="productImg">
+            <img src="images/walnut.jpg">
+          </div>
+          <h3>Walnut Cinnamon Roll</h3>
+          <p>From $3</p>
+          <a onmouseover="buttonHover3();" onmouseout="buttonOut3();"><button id="walnut"><p>Shop Now</p></button></a>
+        </div>
+      </div>
+    </body>
+    <div class="clear"></div>
+
+<!-- FOOTER -->
+    <footer>
+      <div class="gridThree">
+        <div class="stacked">
+          <h3>Visit Our Store</h3>
+          <p>321 Wilkins Ave<br>
+          Squirrel Hill<br>
+          Pittsburgh, PA 15217</p>
+        </div>
+        <div class="stacked">
+          <h3>Contact Us</h3>
+          <a href="mailto: hello@bunbun.com"><p>hello@bunbun.com</a><br>
+            (412) 425 - 3812</p>
+        </div>
+        <div class="stacked">
+          <h3>Connect with Us</h3>
+          <img class="svg" src="images/twitter.svg">
+          <img class="svg" src="images/facebook.svg">
+          <img class="svg" src="images/instagram.svg">
+        </div>
+      </div>
+    </footer>
+
+</html>
