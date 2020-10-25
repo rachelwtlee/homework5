@@ -1,0 +1,117 @@
+<html>
+
+    <head>
+        <title>Cart</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body onload="populateCart(); calculateCart();">
+
+<!--    MAIN NAV-->
+    <header>
+      <nav>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <a href="index.html" id="bunBun">
+                    <div id="rollSvg">
+                      <img src="images/bun.svg">
+                    </div>
+                    <div id="rollSvg">
+                      <img src="images/bun.svg">
+                    </div>
+                      <h2>Bake Shop</h2>
+                  </a>
+                </li>
+<!-- DROPDOWN MENU -->
+                <li>
+                  <li class="navText">
+                      <a href="product.html">Shop <img src="images/chevron.svg" id="svgNav"></a>
+                      <ul>
+                        <li>
+                          <a href="product.html">New In</a>
+                        </li>
+                        <li>
+                          <a href="#">Best Sellers</a>
+                        </li>
+                        <li>
+                          <a href="#">Fall Favourites</a>
+                        </li>
+                        <li>
+                          <a href="#">All Products</a>
+                        </li>
+                      </ul>
+                  </li>
+                </li>
+
+                <li class="navText">
+                  <a href="about.html">About</a>
+                </li>
+
+                <li class="navText">
+                  <a href="contact.html">Contact</a>
+                </li>
+
+                <li class="navText">
+                  <a href="cart.html">0<img src="images/shopping-bag.svg" id="svgNav"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+    </header>
+
+    <body>
+      <div class="gridFive">
+        <h1 id="aboutText">Cart</h1>
+        <div class="clear"></div>
+<!-- CART TENTATIVE -->
+        <!-- <main>
+           <h4>Cart</h4> -->
+            <div><span id="cart"></span>
+
+                <div class="separator"></div>
+            </div>
+            <div id="priceSection">
+            <h2 id="priceName">Order Subtotal</h2>
+            <p id="priceAdd">total price: <span id="price"></span></p>
+            <a onmouseover="primaryHover();" onmouseout="primaryOut();" href="#"><button class="buttonPrimary" id="primary"><p>Proceed to Checkout</p></button></a>
+            </div>
+
+        <!-- </main> -->
+    </div>
+    </body>
+
+    <div class="clear"></div>
+
+<!-- FOOTER -->
+    <footer>
+      <div class="gridThree">
+        <div class="stacked">
+          <h3>Visit Our Store</h3>
+          <p>321 Wilkins Ave</p>
+          <p>Squirrel Hill</p>
+          <p>Pittsburgh, PA 15217</p>
+        </div>
+        <div class="stacked">
+          <h3>Contact Us</h3>
+          <a href="mailto: hello@bunbun.com"><p>hello@bunbun.com</a><br>
+            (412) 425 - 3812</p>
+        </div>
+        <div class="stacked">
+          <h3>Connect with Us</h3>
+          <img class="svg" src="images/twitter.svg">
+          <img class="svg" src="images/facebook.svg">
+          <img class="svg" src="images/instagram.svg">
+        </div>
+      </div>
+    </footer>
+
+</html>

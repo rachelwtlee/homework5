@@ -1,3 +1,85 @@
+var quantity= ["1 roll", "6 rolls", "12 rolls"];
+
+//INITIAL CONSTRUCTOR FUNCTION WITH GLAZE AND QUANTITY INPUTS, STORES INPUTS
+function selectedRoll(glaze, quantity, price) {
+    this.glaze = glaze;
+    this.quantity = quantity;
+    this.price = price;
+}
+
+//UPDATES GLAZE BASED ON MOUSE CLICK
+function glaze1(){
+    selectedRoll.glaze = "none";
+    document.getElementById("img1").src= "images/pumpkin.jpg";
+}
+
+function glaze2(){
+    selectedRoll.glaze = "doubleChocolate";
+    document.getElementById("img1").src= "images/chocolate.jpg";
+}
+
+function glaze3(){
+    selectedRoll.glaze = "sugarMilk";
+    document.getElementById("img1").src= "images/sugarmilk.jpg";
+}
+
+// UPDATES QUANTITY BASED ON MOUSE CLICK
+function quantity1(){
+    selectedRoll.quantity = "one";
+    selectedRoll.price = "$3";
+}
+
+function quantity2(){
+    selectedRoll.quantity = "six";
+    selectedRoll.price = "$15";
+}
+
+function quantity3(){
+    selectedRoll.quantity = "twelve";
+    selectedRoll.price = "$30";
+}
+
+function pumpkinGlaze(){
+    console.log(selectedRoll.glaze); // checking to see if correct glaze is selected onclick
+    //background neutral for non selected elements
+    document.getElementById("none").style.background="";
+    document.getElementById("doubleChocolate").style.background="";
+    document.getElementById("sugarMilk").style.background="";
+    //text black for non selected elements
+    document.getElementById("none").style.color="";
+    document.getElementById("doubleChocolate").style.color="";
+    document.getElementById("sugarMilk").style.color="";
+    //lowered opacity for non selected elements
+    document.getElementById("none").style.opacity="0.4";
+    document.getElementById("doubleChocolate").style.opacity="0.4";
+    document.getElementById("sugarMilk").style.opacity="0.4";
+    // styling for selected element
+    document.getElementById(selectedRoll.glaze).style.background = "#C17740";
+    document.getElementById(selectedRoll.glaze).style.color = "#FFF";
+    document.getElementById(selectedRoll.glaze).style.opacity = "1";
+}
+
+function pumpkinQuantity(){
+    console.log(selectedRoll.quantity); // checking to see if correct glaze is selected onclick
+    //background neutral for non selected elements
+    document.getElementById("one").style.background="";
+    document.getElementById("six").style.background="";
+    document.getElementById("twelve").style.background="";
+    //text black for non selected elements
+    document.getElementById("one").style.color="";
+    document.getElementById("six").style.color="";
+    document.getElementById("twelve").style.color="";
+    //lowered opacity for non selected elements
+    document.getElementById("one").style.opacity="0.4";
+    document.getElementById("six").style.opacity="0.4";
+    document.getElementById("twelve").style.opacity="0.4";
+    // styling for selected element
+    document.getElementById(selectedRoll.quantity).style.background = "#C17740";
+    document.getElementById(selectedRoll.quantity).style.color = "#FFF";
+    document.getElementById(selectedRoll.quantity).style.opacity = "1";
+    document.getElementById("price").textContent = selectedRoll.price; //update price
+}
+
 //BUTTON HOVER STYLING
 function buttonHover() {
     document.getElementById("pumpkin").style.background = "#F68838";

@@ -56,6 +56,14 @@ a:hover {
   float: left;
 }
 
+.gridFive {
+  display: grid;
+  grid-template-columns: repeat(5, 20.78vw);
+  grid-column-gap: 2vw;
+  margin: 0 3vw 0 3vw;
+  float: left;
+}
+
 /*NAV BAR*/
 nav {
     padding: 1em 3vw 3em 3vw;
@@ -218,7 +226,6 @@ nav ul ul li:hover ul {
 
 #pumpkinText {
   grid-column: 4/7;
-  padding-bottom: 1em;
 }
 
 /* SELECTOR STYLING */
@@ -235,6 +242,20 @@ select {
   background: #FFEDDF;
   border: none;
   width: 10em;
+}
+
+.pumpkinSelect {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 1vw;
+  float: left;
+  padding-bottom: 2em;
+}
+
+.selectContainer {
+  padding: 0.5em 1em 0.5em 1em;
+  border: 1px solid #492911;
+  border-radius: 0.25em;
 }
 
 /* BUTTON STYLING */

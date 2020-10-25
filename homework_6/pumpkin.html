@@ -59,7 +59,7 @@
                 </li>
 
                 <li class="navText">
-                  <a href="#">Cart<img src="images/shopping-bag.svg" id="svgNav"></a>
+                  <a href="cart.html">0<img src="images/shopping-bag.svg" id="svgNav"></a>
                 </li>
               </ul>
             </li>
@@ -70,7 +70,7 @@
     <body>
       <div class="grid">
           <div class="productImg" id="pumpkinImg">
-            <div id="pumpkinImg"><img src="images/pumpkin.jpg"></div>
+            <div id="pumpkinImg"><img id="img1"src="images/pumpkin.jpg"></div>
             <div id="pumpkinImg"><img src="images/walnut.jpg"></div>
           </div>
 
@@ -83,26 +83,25 @@
 
 <!-- SELECTOR INPUTS -->
             <h3 class="stackedText">Glaze</h3>
-            <div class="selector" id="stackedPadding">
-            <select id="glaze" name="glaze">
-              <option value="none">None</option>
-              <option value="doubleChocolate">Double Chocolate</option>
-              <option value="sugarMilk">Sugar Milk</option>
-              <option value="vanillaMilk">Vanilla Milk</option>
-            </select>
-          </div>
+            <div class="pumpkinSelect" onclick="pumpkinGlaze();">
+                <div class="selectContainer" id="none" onclick="glaze1()"><p>None</p></div>
+                <div class="selectContainer" id="doubleChocolate" onclick="glaze2()"><p>Double Chocolate</p></div>
+                <div class="selectContainer" id="sugarMilk" onclick="glaze3()"><p>Sugar Milk</p></div>
+            </div>
 
-          <h3 class="stackedText">Quantity</h3>
-          <div class="selector" id="stackedPadding">
-          <select id="quantity" name="quantity">
-            <option value="one">1 Roll</option>
-            <option value="six" onclick="sixPrice();">6 Rolls</option>
-            <option value="twelve">12 Rolls</option>
-          </select>
+            <div class="clear"></div>
+
+            <h3 class="stackedText">Quantity</h3>
+            <div class="pumpkinSelect" onclick="pumpkinQuantity();">
+                <div class="selectContainer" id="one" onclick="quantity1()"><p>1 Roll</p></div>
+                <div class="selectContainer" id="six" onclick="quantity2()"><p>6 Rolls</p></div>
+                <div class="selectContainer" id="twelve" onclick="quantity3()"><p>12 Rolls</p></div>
+            </div>
+
+            <div class="clear"></div>
+
+            <a onmouseover="primaryHover();" onmouseout="primaryOut();" href="cart.html"><button class="buttonPrimary" id="primary"><p>ADD TO CART</p></button></a>
         </div>
-
-          <a onmouseover="primaryHover();" onmouseout="primaryOut();" href="#"><button class="buttonPrimary" id="primary"><p>Add to Cart</p></button></a>
-          </div>
       </div>
     </body>
 
