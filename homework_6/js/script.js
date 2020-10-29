@@ -1,4 +1,5 @@
-var quantity= ["1 roll", "6 rolls", "12 rolls"];
+var cart = [];
+var cartItem = 0;
 
 //INITIAL CONSTRUCTOR FUNCTION WITH GLAZE AND QUANTITY INPUTS, STORES INPUTS
 function selectedRoll(glaze, quantity, price) {
@@ -78,6 +79,17 @@ function pumpkinQuantity(){
     document.getElementById(selectedRoll.quantity).style.color = "#FFF";
     document.getElementById(selectedRoll.quantity).style.opacity = "1";
     document.getElementById("price").textContent = selectedRoll.price; //update price
+}
+
+function addCart() {
+    cart.push([selectedRoll.glaze, selectedRoll.quantity, selectedRoll.price]); //pushes glaze, quantity and price to empty array for storage
+    cartItem = cart.length; //updates length
+    document.getElementById("cartNumber").textContent = cartItem; //populates new cart item number
+    console.log(cart);
+
+// PUSH CART AND CART LENGTH TO LOCAL STORAGE
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartLength", JSON.stringify(cart.length));
 }
 
 //BUTTON HOVER STYLING

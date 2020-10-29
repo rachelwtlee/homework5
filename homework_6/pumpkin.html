@@ -59,7 +59,7 @@
                 </li>
 
                 <li class="navText">
-                  <a href="cart.html">0<img src="images/shopping-bag.svg" id="svgNav"></a>
+                  <a href="cart.html"><span id="cartNumber">0</span><img src="images/shopping-bag.svg" id="svgNav"></a>
                 </li>
               </ul>
             </li>
@@ -100,7 +100,7 @@
 
             <div class="clear"></div>
 
-            <a onmouseover="primaryHover();" onmouseout="primaryOut();" href="cart.html"><button class="buttonPrimary" id="primary"><p>ADD TO CART</p></button></a>
+            <a onmouseover="primaryHover();" onmouseout="primaryOut();" onclick="addCart();"><button class="buttonPrimary" id="primary"><p>ADD TO CART</p></button></a>
         </div>
       </div>
     </body>
