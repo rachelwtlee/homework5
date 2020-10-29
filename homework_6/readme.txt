@@ -1,3 +1,1 @@
-EXTRA CREDIT
-
-I created 2 additional pages— an about page (about.html) and a contact page (contact.html)
+For assignment 6A, to view the 'Add Cart' tally and to modify options on the product detail page, go to the Pumpkin Spice Cinnamon Roll product page. 
