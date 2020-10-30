@@ -1,5 +1,5 @@
 var cart = [];
-var cartItem = 0;
+var cartLength = 0;
 
 //INITIAL CONSTRUCTOR FUNCTION WITH GLAZE AND QUANTITY INPUTS, STORES INPUTS
 function selectedRoll(glaze, quantity, price) {
@@ -83,8 +83,8 @@ function pumpkinQuantity(){
 
 function addCart() {
     cart.push([selectedRoll.glaze, selectedRoll.quantity, selectedRoll.price]); //pushes glaze, quantity and price to empty array for storage
-    cartItem = cart.length; //updates length
-    document.getElementById("cartNumber").textContent = cartItem; //populates new cart item number
+    cartLength = cart.length; //updates length
+    document.getElementById("cartNumber").textContent = cartLength; //populates new cart item number
     console.log(cart);
 
 // PUSH CART AND CART LENGTH TO LOCAL STORAGE

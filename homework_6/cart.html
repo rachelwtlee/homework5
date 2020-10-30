@@ -11,7 +11,7 @@
         <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
-    <body onload="populateCart(); calculateCart();">
+    <body onload="populateCart(); cartSum();">
 
 <!--    MAIN NAV-->
     <header>
@@ -83,9 +83,9 @@
             <!-- <img class="svg" src="images/x.svg"> -->
           </div>
 
-          <div id="priceSection">
-            <h2 id="priceName">Order Subtotal</h2>
-            <p id="priceAdd"><span id="price">$</span></p>
+          <div>
+            <h2>Order Subtotal</h2>
+            <p id="priceTotal"><span id="price">$</span></p>
             <a onmouseover="primaryHover();" onmouseout="primaryOut();" href="#"><button class="buttonPrimary" id="primary"><p>PROCEED TO PAYMENT</p></button></a>
           </div>
         </div>
