@@ -82,14 +82,89 @@ function pumpkinQuantity(){
 }
 
 function addCart() {
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    var cartLength = cart.length + 1; //updates length
     cart.push([selectedRoll.glaze, selectedRoll.quantity, selectedRoll.price]); //pushes glaze, quantity and price to empty array for storage
-    cartLength = cart.length; //updates length
     document.getElementById("cartNumber").textContent = cartLength; //populates new cart item number
     console.log(cart);
 
 // PUSH CART AND CART LENGTH TO LOCAL STORAGE
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("cartLength", JSON.stringify(cart.length));
+}
+
+//POPULATE CART WITH ITEM SUMMARIES VIA LOCAL STORAGE DATA
+function populateCart(){
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    //updates cart item counter
+    document.getElementById("cartNumber").textContent = JSON.parse(localStorage.getItem("cartLength"));
+    document.getElementById("cart").innerHTML = "";
+
+    // loops through items pushed to cart array to generate and populate cards
+    for (var i = 0; i < cart.length; i++) {
+      var bunImg = document.createElement("img");
+      bunImg.setAttribute("src", "images/pumpkin.jpg");
+      bunImg.setAttribute("id", "cartImg");
+
+      var bunType = document.createElement("h3");
+      var bunString = document.createTextNode("Pumpkin Spice Cinnamon Roll");
+      bunType.appendChild(bunString);
+      bunType.setAttribute("id", "cartText");
+
+      var glazeType = document.createElement("p");
+      var glazeString = document.createTextNode("Glaze: " + cart[i][0]);
+      // populates value looped item with element 0 in array (glaze)
+      glazeType.appendChild(glazeString);
+      glazeType.setAttribute("id", "glaze" + i);
+      glazeType.setAttribute("id", "cartText");
+
+      var bunQuantity = document.createElement("p");
+      var quantityString = document.createTextNode("Rolls: " + cart[i][1]);
+      bunQuantity.appendChild(quantityString);
+      glazeType.setAttribute("id", "quantity" + i);
+      bunQuantity.setAttribute("id", "cartText");
+
+      var bunPrice = document.createElement("p");
+      var priceString = document.createTextNode("Price: " + cart[i][2]);
+      bunPrice.appendChild(priceString);
+      glazeType.setAttribute("id", "price" + i);
+      bunPrice.setAttribute("id", "cartText");
+
+      //creates trashcan item and sets the onclick attribute to remove items from cart
+      var deleteButton = document.createElement("button");
+      deleteButton.textContent = "Remove from Cart";
+      deleteButton.setAttribute("id", "value");
+      deleteButton.setAttribute("id", "trash" + i);
+      // on mouse click, remove summary card for item i when function deleteCard is called
+      deleteButton.setAttribute("onclick", "deleteCard(this)");
+
+      // create div cards to house all appendChild items
+      var itemCard = document.createElement("div");
+      itemCard.appendChild(bunImg);
+      itemCard.appendChild(bunType);
+      itemCard.appendChild(glazeType);
+      itemCard.appendChild(bunQuantity);
+      itemCard.appendChild(bunPrice);
+      itemCard.appendChild(deleteButton);
+      itemCard.setAttribute("class", "cartItems");
+
+      var itemAll = document.getElementById("cart");
+      itemAll.appendChild(itemCard);
+    }
+}
+
+// DELETES RELEVANT ITEM CARD UPON CLICK
+function deleteCard(element) {
+    var deletedItem = element.getAttribute("value");
+    var cart = JSON.parse(localStorage.getItem("cart"));
+
+    //removes item with relevant i value from array
+    cart.splice(deletedItem, 1);
+    console.log(cart);
+    //updates and restores cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartLength", JSON.stringify(cart.length));
+    populateCart();
 }
 
 //BUTTON HOVER STYLING

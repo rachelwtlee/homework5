@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html>
-
     <head>
         <title>Cart</title>
         <meta charset="utf-8">
@@ -11,7 +11,6 @@
         <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
-    <body onload="populateCart(); cartSum();">
 
 <!--    MAIN NAV-->
     <header>
@@ -33,7 +32,7 @@
 <!-- DROPDOWN MENU -->
                 <li>
                   <li class="navText">
-                      <a href="product.html">Shop <img src="images/chevron.svg" id="svgNav"></a>
+                      <a href="product.html">Shop<img src="images/chevron.svg" id="svgNav"></a>
                       <ul>
                         <li>
                           <a href="product.html">New In</a>
@@ -60,7 +59,7 @@
                 </li>
 
                 <li class="navText">
-                  <a href="cart.html">0<img src="images/shopping-bag.svg" id="svgNav"></a>
+                  <a href="cart.html"><span id="cartNumber">0</span><img src="images/shopping-bag.svg" id="svgNav"></a>
                 </li>
               </ul>
             </li>
@@ -68,27 +67,15 @@
       </nav>
     </header>
 
-    <body>
-      <div class="gridFive">
+    <body onload="populateCart();">
+      <div class="cartGrid">
         <h1 id="aboutText">Cart</h1>
           <div id="cart">
-            <img id="cartImg" src="images/pumpkin.jpg">
-            <div id="cardGrow">
-              <h3>Pumpkin Spice Cinnamon Roll</h3>
-              <p>Sugar Milk Frosting</p>
-              <p>6 Rolls</p>
-              <a onmouseover="buttonHover();" onmouseout="buttonOut();" href="">
-                <button id="pumpkin" class="button"><p>Remove</p></button></a>
-            </div>
-            <!-- <img class="svg" src="images/x.svg"> -->
+              <span id="cartEmpty"></span>
           </div>
-
           <div>
-            <h2>Order Subtotal</h2>
-            <p id="priceTotal"><span id="price">$</span></p>
             <a onmouseover="primaryHover();" onmouseout="primaryOut();" href="#"><button class="buttonPrimary" id="primary"><p>PROCEED TO PAYMENT</p></button></a>
           </div>
-        </div>
     </body>
 
     <div class="clear"></div>
@@ -115,5 +102,4 @@
         </div>
       </div>
     </footer>
-
 </html>

@@ -65,6 +65,10 @@ a:hover {
   float: left;
 }
 
+.cartGrid {
+  padding: 0 3vw 0 3vw;
+}
+
 /*NAV BAR*/
 nav {
     padding: 1em 3vw 3em 3vw;
@@ -144,9 +148,9 @@ nav ul ul li:hover ul {
 /* POSITIONING BEST STAR ABOVE PRODUCT IMG */
 #best {
   position: absolute;
-  right:-20;
-  top:-20;
-  transform: translate(-20, -20);
+  right: 0;
+  top :0;
+  transform: translate(20, 20);
   width: 20%;
   height: 20.75%;
   z-index: 1;
@@ -183,6 +187,7 @@ nav ul ul li:hover ul {
   width: 25vh;
   height: 15vw;
   padding-right: 1.5em;
+  float: left;
 }
 
 #cartImg img, .productImg img, .about img, .about2 img {
@@ -244,13 +249,6 @@ nav ul ul li:hover ul {
   border-radius: 0.25em;
 }
 
-select {
-  font-family: inherit;
-  background: #FFEDDF;
-  border: none;
-  width: 10em;
-}
-
 .pumpkinSelect {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -286,16 +284,19 @@ button.button a, #pumpkinShop h3, #pumpkinShop p, #pumpkinShop, #pumpkinShop a {
   border: 1px solid white;
 }
 
-#cart {
-  border-bottom: 1px solid #492911;
-  display: flex;
-  grid-column: 1/4;
-  padding-bottom: 1em;
+.cartItems, #cartEmpty {
+    width: 100%;
+    padding: 1em 0 1em 0;
+    margin-right: 3em;
+    border-bottom: 1px solid #492911;
+    float: left;
+    clear: both;
 }
 
-#cardGrow {
-  width: 80%;
+#cartText {
+  display: block;
 }
+
 
 /* FOOTER */
 footer {
@@ -328,6 +329,7 @@ iframe {
     clear: both;
 }
 
+/* MEDIA QUERIES FOR RESPONSIVE SCREEN SIZES */
 @media (max-width: 1287px) {
   nav ul li a {
     width: 8.5vw;
